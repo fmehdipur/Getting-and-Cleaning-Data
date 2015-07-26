@@ -28,8 +28,7 @@ names(xdata.mean_sd) <- features[mean_sd, 2]
 names(xdata.mean_sd) <- gsub("\\(|\\)", "", names(xdata.mean_sd))
 
 activities <- read.table('UCI HAR Dataset/activity_labels.txt')
-#activities[, 2] <- tolower(as.character(activities[, 2]))
-#activities[, 2] <- gsub("_", "", activities[, 2])
+
 
 ydata[, 1] = activities[y[, 1], 2]
 colnames(ydata) <- "activity"
