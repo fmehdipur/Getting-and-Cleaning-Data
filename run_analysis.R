@@ -1,5 +1,3 @@
-library(RCurl)
-
 
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileurl, destfile = "./UCI_HAR_dataset.zip")
@@ -30,7 +28,7 @@ names(xdata.mean_sd) <- gsub("\\(|\\)", "", names(xdata.mean_sd))
 activities <- read.table('UCI HAR Dataset/activity_labels.txt')
 
 
-ydata[, 1] = activities[y[, 1], 2]
+ydata[, 1] = activities[ydata[, 1], 2]
 colnames(ydata) <- "activity"
 colnames(subj) <- "subject"
 
